@@ -5,7 +5,7 @@ const userSchema = new Schema(
   {
     name: {
       type: String,
-      required: true,
+      required: false,
       trim: true,
       minlength: 3,
     },
@@ -15,18 +15,18 @@ const userSchema = new Schema(
       trim: true,
       minlength: 3,
     },
-    isVarified: {
+    isVerified: {
       type:Boolean,
       required: true,
     },
     otp: {
         type: Number,
-        required: true,
+        required: false,
         trim:true
     },
     password: {
         type: String,
-        required: true,
+        required: false,
         trim: true,
     },
     about: {
@@ -34,9 +34,9 @@ const userSchema = new Schema(
         required: false,
         unique: false,
     },
-    publications: {
-        type:Array
-    }
+    // publications: {
+    //     type:Array
+    // }
 }
 );
 
